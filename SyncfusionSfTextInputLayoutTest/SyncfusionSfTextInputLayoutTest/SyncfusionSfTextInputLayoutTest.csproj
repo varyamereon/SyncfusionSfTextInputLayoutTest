@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\D-DIN.otf" />
+    <None Remove="Fonts\D-DINCondensed-Bold.otf" />
+    <None Remove="Fonts\D-DINCondensed.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\D-DIN.otf" />
+    <EmbeddedResource Include="Fonts\D-DINCondensed-Bold.otf" />
+    <EmbeddedResource Include="Fonts\D-DINCondensed.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.1.0.69" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="19.1.0.69" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+</Project>

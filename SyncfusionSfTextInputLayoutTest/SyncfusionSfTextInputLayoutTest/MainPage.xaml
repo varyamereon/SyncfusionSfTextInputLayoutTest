@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SyncfusionSfTextInputLayoutTest.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+             BackgroundColor="DarkGray">
+
+	<ContentPage.Resources>
+
+		<ResourceDictionary>
+
+			<Style TargetType="inputLayout:SfTextInputLayout">
+
+				<Setter Property="BackgroundColor" Value="WhiteSmoke" />
+
+				<Setter Property="ContainerBackgroundColor" Value="WhiteSmoke" />
+
+				<Setter Property="ContainerType" Value="Filled" />
+
+				<Setter Property="OutlineCornerRadius" Value="0" />
+
+				<Setter Property="ReserveSpaceForAssistiveLabels" Value="False" />
+
+				<Setter Property="UnfocusedStrokeWidth" Value="0" />
+
+				<Setter Property="HintLabelStyle">
+
+					<inputLayout:LabelStyle FontFamily="D-DIN Condensed" />
+
+				</Setter>
+
+				<Setter Property="CounterLabelStyle">
+
+					<inputLayout:LabelStyle FontFamily="D-DIN Condensed Bold" />
+
+				</Setter>
+
+				<Setter Property="ErrorLabelStyle">
+
+					<inputLayout:LabelStyle FontFamily="D-DIN Condensed" />
+
+				</Setter>
+
+				<Setter Property="HelperLabelStyle">
+
+					<inputLayout:LabelStyle FontFamily="D-DIN Condensed" />
+
+				</Setter>
+
+			</Style>
+
+			<Style TargetType="maskededit:SfMaskedEdit">
+
+				<Setter Property="FontFamily" Value="D-DIN" />
+
+				<Setter Property="PromptChar" Value="-" />
+
+				<Setter Property="ValidationMode" Value="LostFocus" />
+
+			</Style>
+
+			<Style TargetType="Entry">
+
+				<Setter Property="FontFamily" Value="D-DIN" />
+
+			</Style>
+
+		</ResourceDictionary>
+
+	</ContentPage.Resources>
+
+	<Grid Margin="2"
+	      ColumnDefinitions="*,*"
+	      ColumnSpacing="2"
+	      RowDefinitions="Auto,Auto"
+	      RowSpacing="2">
+
+		<inputLayout:SfTextInputLayout Hint="Name">
+
+			<maskededit:SfMaskedEdit x:Name="maskedEdit"
+			                         Mask="00/00/0000" />
+
+		</inputLayout:SfTextInputLayout>
+
+		<inputLayout:SfTextInputLayout Hint="Name"
+		                               Grid.Column="1">
+
+			<Entry />
+
+		</inputLayout:SfTextInputLayout>
+
+		<inputLayout:SfTextInputLayout Hint="Name"
+		                               Grid.Row="1"
+		                               Grid.ColumnSpan="2">
+
+			<Entry />
+
+		</inputLayout:SfTextInputLayout>
+
+	</Grid>
+
+</ContentPage>
