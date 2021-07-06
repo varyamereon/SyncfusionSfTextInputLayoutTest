@@ -58,11 +58,15 @@
 
 				<Setter Property="FontSize" Value="14" />
 
+				<Setter Property="WatermarkFontSize" Value="14" />
+
 				<Setter Property="BackgroundColor" Value="Transparent" />
 
 				<Setter Property="FontFamily" Value="D-DIN" />
 
-				<!--<Setter Property="PromptChar" Value="-" />-->
+				<Setter Property="WatermarkFontFamily" Value="D-DIN" />
+
+				<Setter Property="PromptChar" Value="-" />
 
 				<Setter Property="ValidationMode" Value="LostFocus" />
 
@@ -86,8 +90,7 @@
 
 		<inputLayout:SfTextInputLayout Hint="Name">
 
-			<maskededit:SfMaskedEdit Keyboard="Numeric"
-			                         Mask="([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
+			<maskededit:SfMaskedEdit Mask="([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
 			                         MaskType="RegEx" />
 
 		</inputLayout:SfTextInputLayout>
@@ -95,8 +98,7 @@
 		<inputLayout:SfTextInputLayout Hint="Name"
 		                               Grid.Column="1">
 
-			<maskededit:SfMaskedEdit Keyboard="Numeric"
-			                         Mask="([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
+			<maskededit:SfMaskedEdit Mask="([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]"
 			                         MaskType="RegEx" />
 
 		</inputLayout:SfTextInputLayout>
